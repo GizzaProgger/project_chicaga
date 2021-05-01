@@ -1,0 +1,99 @@
+<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=wBg0C62EI_sP0UYnmbHHZCfTQwT8cHQ5lmPua68ytTnwvp6NLCJVVOKDjtsyUk0whWavxeimn6ZCOYY_Z00R4FYwEclS9aO8q_oyT9kRhHA" charset="UTF-8"></script><div id="map" style="width: 100%; height: 100%"></div>
+
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map("map", {
+        center:[59.996578902339074,30.347471521484277],
+        zoom: 11,
+        controls: []
+    }); 
+            
+    var myGeoObjects = [];
+    
+    // Метка 1
+    myGeoObjects[0] = new ymaps.Placemark([60.041577799263,30.325296132645157],{
+                    balloonContentBody: 'Выборгский район ТРК «Вояж», пр-т Энгельса, д. 124, к. 1, 3-й этаж',
+                    },{
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/address.png', 
+                    iconImageSize: [42, 42],
+                    iconImageOffset: []
+    });
+    
+    // Метка 2
+    myGeoObjects[1] = new ymaps.Placemark([60.01503638750995,30.39075563921737],{
+                    balloonContentBody: 'Калининский район Проспект Науки, д. 10, к. 1',
+                    },{
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/address.png', 
+                    iconImageSize: [42, 42],
+                    iconImageOffset: []
+    });
+    
+    // Метка 3
+    myGeoObjects[2] = new ymaps.Placemark([59.9454891644826,30.483605377315428],{
+                    balloonContentBody: 'Красногвардейский район Бизнес-центр, Осипенко, д. 2',
+                    },{
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/address.png', 
+                    iconImageSize: [42, 42],
+                    iconImageOffset: []
+    });
+    
+    // Метка 4
+    myGeoObjects[3] = new ymaps.Placemark([59.85127698462193,30.260135514715245],{
+                    balloonContentBody: 'Кировский район Ленинский проспект, д. 119, к. 5, 3-й этаж',
+                    },{
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/address.png', 
+                    iconImageSize: [42, 42],
+                    iconImageOffset: []
+    });
+    
+    // Метка 5
+    myGeoObjects[4] = new ymaps.Placemark([59.83185576714269,30.346075827716756],{
+                    balloonContentBody: 'Московский район Улица Звёздная, д. 1, Бизнес-центр, 2-й этаж, офис 201',
+                    },{
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/address.png', 
+                    iconImageSize: [42, 42],
+                    iconImageOffset: []
+    });
+    
+    // Метка 6
+    myGeoObjects[5] = new ymaps.Placemark([59.828705826154476,30.38035907738492],{
+                    balloonContentBody: 'Фрунзенский район Балканская площадь, 5И (Балканский-1), 7-й этаж',
+                    },{
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/address.png', 
+                    iconImageSize: [42, 42],
+                    iconImageOffset: []
+    });
+                
+    var clusterer = new ymaps.Clusterer({
+        clusterDisableClickZoom: false,
+        clusterOpenBalloonOnClick: false,
+    });
+    
+    clusterer.add(myGeoObjects);
+    myMap.geoObjects.add(clusterer);
+    myMap.behaviors.disable('scrollZoom');
+
+}
+</script>  
+
+
+<style>
+[class*="ymaps-2"][class*="-ground-pane"] {
+	filter: opacity(70%);
+	-ms-filter: opacity(70%);
+	-webkit-filter: opacity(70%);
+	-moz-filter: opacity(70%);   
+	-o-filter: opacity(70%);  
+}
+</style>
+
+
