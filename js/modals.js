@@ -1,4 +1,16 @@
 // Отвечает за открытие модальных окон
+// На элемент-тригер навешиваем data-open-modal="modal-name"
+// Пример
+// <a href="#" class="link-call" data-open-modal="modal-13">звонок за наш счет</a>
+// Блоку с модалкой даем data-modal-name="modal-name"
+// <div class="lbock-sertyficate modal-13 modal" data-modal-name="modal-13">
+// Внутрь этого блока вставляем блок <div class="modal-wrapper"></div>
+// И уже в modal-wrapper вставляем сам блок
+// Готовые модалки можно достать из блок .div-block-lbock
+// Копируй их, но внутри них содержиться блоки .lbock_bg
+// Он не нужен. Его можно удалить
+// modal-name давай как в moqups
+// Чтобы его посмотреть открой Pages -> Формы -> Название формы
 const modals = {
   closeSelector: "",
   init(config) {
