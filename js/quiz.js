@@ -28,6 +28,7 @@ let quiz = {
   },
   updateProgressbar() {
     this.block.querySelector(".bar-choice").style.width = this.getPercentCompleted() + "%";
+    this.block.querySelector(".current_step").innerHTML = `${this.currentStep} из ${this.numberSteps}`
   },
   finish() {
 
