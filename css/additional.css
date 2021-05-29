@@ -3,3 +3,41 @@
   left: 71px;
   top: 32px;
 }
+.modal-wrappper {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15)));
+  background-image: linear-gradient(
+    180deg
+    , rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+}
+.lbock_bg {
+  height: 100vh;
+}
+.modal {
+  opacity: 0;
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.modal--open {
+  pointer-events: all;
+  opacity: 1;
+  z-index: 9999;
+}
+.lbock_bg {
+  height: 100%;
+}
