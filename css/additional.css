@@ -60,3 +60,30 @@
     box-shadow: 0 0 0 0 #427ee911;
   }
 }
+
+.div-checkbox, .div-checkbox input {
+  cursor: pointer;
+}
+.not-joiner {
+  background-image: none;
+}
+.form-block-choice-block {
+  display: none;
+}
+.form-block-choice-block--active {
+  display: block;
+}
+.bar-choice {
+  transition: .8s;
+  -webkit-transition: .8s;
+  -moz-transition: .8s;
+  -ms-transition: .8s;
+  -o-transition: .8s;
+}
+.current_step {
+  transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+}
