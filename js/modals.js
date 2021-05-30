@@ -16,19 +16,19 @@ const modalsFactory = () => {
     closeSelector: "",
     observers: [],
     init(config) {
-      this.closeSelector = config.closeSelector;
-      document.querySelectorAll("[data-open-modal]").forEach(this.initHandlerOpen);
-      document.querySelectorAll(this.closeSelector).forEach(element => {
-        let parentModal = this.getParentModal(element);
+      self.closeSelector = config.closeSelector;
+      document.querySelectorAll("[data-open-modal]").forEach(self.initHandlerOpen);
+      document.querySelectorAll(self.closeSelector).forEach(element => {
+        let parentModal = self.getParentModal(element);
         if (parentModal) {
-          element.addEventListener("click", () => this.closeModal(parentModal));
+          element.addEventListener("click", () => self.closeModal(parentModal));
         }
       });
     },
     initHandlerOpen(node) {
       node.addEventListener("click", e => {
         e.preventDefault();
-        this.openModal(node.dataset.openModal);
+        self.openModal(node.dataset.openModal);
       })
     },
     openModal(selector) {
@@ -50,7 +50,7 @@ const modalsFactory = () => {
     getParentModal(children) {
       if (!children) return;
       if (children.classList.contains("modal")) return children;
-      return this.getParentModal(children.parentElement)
+      return self.getParentModal(children.parentElement)
     },
   }
   let self = object;
