@@ -107,3 +107,7 @@
   z-index: 500;
   pointer-events: all;
 }
+
+.dropdown-toggle {
+  white-space: normal;
+}
