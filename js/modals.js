@@ -16,7 +16,6 @@ const modalsFactory = () => {
     closeSelector: "",
     observers: [],
     init(config) {
-      console.log(self)
       this.closeSelector = config.closeSelector;
       document.querySelectorAll("[data-open-modal]").forEach(this.initHandlerOpen);
       document.querySelectorAll(this.closeSelector).forEach(element => {
