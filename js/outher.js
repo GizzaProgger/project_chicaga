@@ -47,4 +47,4 @@
     return res;
   }
   setTimeToCallInput()
-})()
+})();
