@@ -13,6 +13,7 @@
 		<link href="images/605b450568e9af2f8794b53d_favikon3.png" rel="apple-touch-icon">
 		<meta name="author" content="wtw">
 		<link rel="stylesheet" href="./css/additional.css">
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 		<!-- HEAD CODE -->
 		<style>
 .content-scroll_wrapper-3::-webkit-scrollbar-button { 
@@ -1208,7 +1209,7 @@ padding-right: 20px;
 										<div class="div-pole-form _2"><label for="node-2" class="field-label _3"><strong>в школе CHICAGA</strong><br><span class="text-span-form">at CHICAGA school</span></label><select id="shckol" data-name="Школа" class="select-field w-select"><option value="Выберите школу">Выберите школу</option><option value="1">1</option></select></div>
 										<div class="div-pole-form-dop _3"><label for="node-3" class="field-label"><strong>Мой телефон</strong><br><span class="text-span-form">My phone number</span></label><input type="tel" maxlength="256" data-name="Телефон" placeholder="Телефон" id="phone" class="phone-field w-input"></div>
 										<div class="div-calendar">
-											<div class="div-pole-form calendar"><label for="node-4" class="field-label _2"><strong>Будет удобно, если вы позвоните</strong><br><span class="text-span-form">It will be convenient if you call me</span></label><input type="text" class="text-field-data w-input" maxlength="256" data-name="Дата" placeholder="сегодня" id="datepicker"></div>
+											<div class="div-pole-form calendar"><label for="node-4" class="field-label _2"><strong>Будет удобно, если вы позвоните</strong><br><span class="text-span-form">It will be convenient if you call me</span></label><input type="date" class="text-field-data w-input" maxlength="256" data-name="Дата" placeholder="сегодня" id="datepicker"></div>
 											<div class="div-pole-form-time"><label for="node-4" class="field-label _3"><strong>в</strong><br><span class="text-span-form">at</span></label><select id="time" data-name="Время" class="select-field-time w-select"><option value="15:15">15:15</option><option value="1">1</option></select></div>
 										</div>
 										<div class="div-podpiska"><label class="w-checkbox checkbox-field"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" checked class="w-checkbox-input checkbox"><span class="checkbox-label w-form-label"><strong>Хочу получить открытку CHICAGA на e-mail </strong><span class="hint-question-form">?</span></span></label>
@@ -1410,6 +1411,7 @@ padding-right: 20px;
 									<div class="info-contact">тел. <strong>+7 (812) 242-82-01</strong><br>E-mail: <span class="mail">ozerki@chicaga.ru</span></div><a href="#" class="link">Увидеть вход и парковку</a></div>
 							</div>
 							<div class="div-map">
+								<div id="map" style="width: 100%;height: 400%;"></div>
 								<div class="div-block-offer">
 									<div class="text-offer">Все школы не рядом с вами?</div>
 									<div class="subtitle-offer">Попробуйте обучение онлайн в группах <br>от 2 до 6 человек!</div><a href="#" class="button w-button" data-open-modal="modal-16">записаться  на 3 бесплатных<br>пробных занятия онлайн</a></div>
@@ -1942,14 +1944,13 @@ padding-right: 20px;
 					</div><a href="#" class="closure_link">×</a></div>
 			</div>
 		</div>
+		<a href="/#up" class="upstairs w-inline-block up-button" data-menuanchor="up"></a>
 		<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=605b19076a686a415c04845f" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 		<script src="js/script.js?ver=1621411803" type="text/javascript"></script>
 		<script src="./mail.js" type="text/javascript"></script>
 		<script src="https://www.google.com/recaptcha/api.js"></script>
 		<!-- Общие скрипты для двух мобильной и десктопной версий -->
-	
-		<script src="https://chicaga.ru/sharedFiles/js/scripts.js?v=1.3"></script>
-		<!-- <script src="js/custom_demo.js"></script> -->
+		<script src="https://chicaga.ru/sharedFiles/js/scripts.js?v1.2"></script>
 		<script src="https://chicaga.ru//assets/components/project/app/js/custom_demo.js?v=2.4" defer=""></script>
 		<script src="js/sound_script.js"></script>
 		<script src="js/modals.js"></script>
