@@ -1,0 +1,109 @@
+.sidebar {
+  position: fixed;
+  left: 71px;
+  top: 32px;
+}
+.modal-wrappper {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15)));
+  background-image: linear-gradient(
+    180deg
+    , rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+}
+.lbock_bg {
+  height: 100vh;
+}
+.modal {
+  opacity: 0;
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.modal--open {
+  pointer-events: all;
+  opacity: 1;
+  z-index: 9999;
+}
+.lbock_bg {
+  height: 100%;
+}
+.pulse {
+  animation: pulse 1.5s infinite;
+  -webkit-animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 #427ee911;
+    box-shadow: 0 0 0 0 #427ee911;
+  }
+  70% {
+    -moz-box-shadow: 0px 0 0 7px #427ee966;
+    box-shadow: 0px 0 0 7px #427ee966;
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 #427ee911;
+    box-shadow: 0 0 0 0 #427ee911;
+  }
+}
+
+.div-checkbox, .div-checkbox input {
+  cursor: pointer;
+}
+.not-joiner {
+  background-image: none;
+}
+.form-block-choice-block {
+  display: none;
+}
+.form-block-choice-block--active {
+  display: block;
+}
+.bar-choice {
+  transition: .8s;
+  -webkit-transition: .8s;
+  -moz-transition: .8s;
+  -ms-transition: .8s;
+  -o-transition: .8s;
+}
+.current_step {
+  transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+}
+
+.div-hint {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -100;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .8s;
+  -webkit-transition: opacity .8s;
+  -moz-transition: opacity .8s;
+  -ms-transition: opacity .8s;
+  -o-transition: opacity .8s;
+}
+
+.div-hint--active {
+  opacity: 1;
+  z-index: 500;
+  pointer-events: all;
+}
