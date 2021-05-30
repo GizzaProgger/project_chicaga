@@ -239,7 +239,7 @@ padding-right: 20px;
 										<div class="text-button-header">а еще поездки за границу, авто, <br>бесплатное обучение и другие призы <br>разыгрываются среди наших учеников</div>
 									</div>
 								</div>
-								<div class="block-button-video"><a href="#" class="video_link w-inline-block pulse"></a>
+								<div class="block-button-video"><a href="#" class="video_link w-inline-block pulse" data-open-modal="video" data-set-video="http://techslides.com/demos/sample-videos/small.mp4"></a>
 									<div class="text-video_link">Узнайте, почему <br>вы <strong>заговорите <br>на английском в CHICAGA</strong></div>
 								</div>
 							</div>
@@ -1495,44 +1495,6 @@ padding-right: 20px;
 						</div><a href="#" class="closure_link">×</a></div>
 				</div>
 			</div>
-			<div class="lbock-video">
-				<div class="lbock_bg">
-					<div class="lbock_window">
-						<div class="block-lbock_form">
-							<div>
-								<div class="block-lbock_video"><img src="images/6090404f926dc8403d066315_video_form.jpg" loading="lazy" alt=""><a href="#" class="pulse link-video-lbock w-inline-block"></a></div>
-								<div class="info-block">
-									<div class="text-info-block">Вы узнаете за 2 минуты:</div>
-									<ul role="list" class="list-sait">
-										<li class="list-item-sait">
-											<div class="text-list">почему <strong>вы заговорите на английском </strong><br>в нашей <strong>зажигательной школе</strong></div>
-										</li>
-										<li class="list-item-sait">
-											<div class="text-list _2"><strong>об акциях и розыгрышах</strong> призов</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="form_test-lbock">
-								<div class="title_form-lbock">Запишитесь на 3 бесплатных  пробных занятия</div>
-								<div class="text-form-lbock">в одной из 6 школ или онлайн</div>
-								<div class="form_sait w-form">
-									<form id="email-form-2" name="email-form-2" data-name="Email Form 2"><label for="node-3" class="field-label-wait">Как к вам обращаться?</label><input type="text" maxlength="256" data-name="Имя" placeholder="Имя" id="node" class="pole-form w-input"><label for="node-3" class="field-label-wait">Введите телефон</label><input type="tel" maxlength="256" data-name="Телефон" placeholder="Телефон" id="node-2" class="pole-form w-input"><label for="name-2" class="field-label-wait">Выберите школу</label><select id="field-3" name="field-3" data-name="Field 3" class="pole-form w-select"><option value="Школа на Академической">Школа на Академической</option><option value="1">1</option></select>
-										<div class="button-test_form">
-											<div class="text-form_button">записаться на 3 бесплатных <br>пробных занятия</div><input type="submit" value="" data-wait="Please wait..." class="submit-button w-button"></div>
-										<div class="text-info_form-politic">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь <br>с <a href="#" class="link-politic">Политикой конфиденциальности</a></div>
-									</form>
-									<div class="w-form-done">
-										<div>Thank you! Your submission has been received!</div>
-									</div>
-									<div class="w-form-fail">
-										<div>Oops! Something went wrong while submitting the form.</div>
-									</div>
-								</div>
-							</div>
-						</div><a href="#" class="closure_link">×</a></div>
-				</div>
-			</div>
 			<div class="lbock-premium">
 				<div class="lbock_bg">
 					<div class="lbock_window premium">
@@ -1818,6 +1780,47 @@ padding-right: 20px;
 					</div>
 				</div>
 			</div>
+			<div class="modal modal-video" data-modal-name="video">
+				<div class="modal-wrappper">
+					<div class="lbock_window">
+						<div class="block-lbock_form">
+							<div>
+								<div class="block-lbock_video">
+									<video src="" style="display: block; width: 553px; height: 409px;"></video>
+									<a href="#" class="pulse link-video-lbock w-inline-block"></a>
+								</div>
+								<div class="info-block">
+									<div class="text-info-block">Вы узнаете за 2 минуты:</div>
+									<ul role="list" class="list-sait">
+										<li class="list-item-sait">
+											<div class="text-list">почему <strong>вы заговорите на английском </strong><br>в нашей <strong>зажигательной школе</strong></div>
+										</li>
+										<li class="list-item-sait">
+											<div class="text-list _2"><strong>об акциях и розыгрышах</strong> призов</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form_test-lbock">
+								<div class="title_form-lbock">Запишитесь на 3 бесплатных  пробных занятия</div>
+								<div class="text-form-lbock">в одной из 6 школ или онлайн</div>
+								<div class="form_sait w-form">
+									<form id="email-form-2" name="email-form-2" data-name="Email Form 2"><label for="node-3" class="field-label-wait">Как к вам обращаться?</label><input type="text" maxlength="256" data-name="Имя" placeholder="Имя" id="node" class="pole-form w-input"><label for="node-3" class="field-label-wait">Введите телефон</label><input type="tel" maxlength="256" data-name="Телефон" placeholder="Телефон" id="node-2" class="pole-form w-input"><label for="name-2" class="field-label-wait">Выберите школу</label><select id="field-3" name="field-3" data-name="Field 3" class="pole-form w-select"><option value="Школа на Академической">Школа на Академической</option><option value="1">1</option></select>
+										<div class="button-test_form">
+											<div class="text-form_button">записаться на 3 бесплатных <br>пробных занятия</div><input type="submit" value="" data-wait="Please wait..." class="submit-button w-button"></div>
+										<div class="text-info_form-politic">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь <br>с <a href="#" class="link-politic">Политикой конфиденциальности</a></div>
+									</form>
+									<div class="w-form-done">
+										<div>Thank you! Your submission has been received!</div>
+									</div>
+									<div class="w-form-fail">
+										<div>Oops! Something went wrong while submitting the form.</div>
+									</div>
+								</div>
+							</div>
+						</div><a href="#" class="closure_link">×</a></div>
+				</div>
+			</div>
 			<div class="lbock-exit-pop-up">
 				<div class="lbock_bg">
 					<div class="lbock_window-popup">
@@ -1940,6 +1943,7 @@ padding-right: 20px;
 		<script src="js/quiz.js"></script>
 		<script src="js/tip.js"></script>
 		<script src="js/outher.js"></script>
+		<script src="js/video.js"></script>
 		<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 		<!-- FOOTER CODE -->
 		<script>
