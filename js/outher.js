@@ -1,4 +1,12 @@
 (() => {
+  let oldImgUrl = "";
+  document.querySelector(".div-pole-otcritka img").addEventListener("mouseover", e => {
+    oldImgUrl = e.target.getAttribute("src");
+    e.target.setAttribute("src", "https://im0-tub-ru.yandex.net/i?id=bde4069236c02909b3fe6ae1e6643c92&n=13&exp=1");
+  })
+  document.querySelector(".div-pole-otcritka img").addEventListener("mouseout", e => {
+    e.target.setAttribute("src", oldImgUrl);
+  })
   let date = new Date();
   // Установить текущею дату
   document.querySelector(".text-field-data").value = date.toISOString().substring(0, 10); 
