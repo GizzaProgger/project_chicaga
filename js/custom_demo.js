@@ -1116,4 +1116,3 @@ var objM = {
 	}
 };
 window.onload = objM.onLoadWindow;
-objM.anchors.init();

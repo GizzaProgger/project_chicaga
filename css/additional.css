@@ -111,3 +111,24 @@
 .dropdown-toggle {
   white-space: normal;
 }
+
+.up-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.navbar-logo-link {
+  background-image: none;
+}
+
+.logo-header path, .logo-header g{
+  fill: #000;
+}
+.link-video-lbock {
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+}
