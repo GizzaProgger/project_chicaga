@@ -30,4 +30,4 @@ const tip = {
   }
 }
 
-tip.init();
+setTimeout(() => tip.init(), 10000)

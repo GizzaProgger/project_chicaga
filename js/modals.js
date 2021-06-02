@@ -15,10 +15,12 @@ const modalsFactory = () => {
   let object = {
     closeSelector: "",
     observers: [],
+    container: document,
     init(config) {
+      self.container = config.container || document
       self.closeSelector = config.closeSelector;
-      document.querySelectorAll("[data-open-modal]").forEach(self.initHandlerOpen);
-      document.querySelectorAll(self.closeSelector).forEach(element => {
+      self.container.querySelectorAll("[data-open-modal]").forEach(self.initHandlerOpen);
+      self.container.querySelectorAll(self.closeSelector).forEach(element => {
         let parentModal = self.getParentModal(element);
         if (parentModal) {
           element.addEventListener("click", () => self.closeModal(parentModal));
@@ -32,9 +34,9 @@ const modalsFactory = () => {
       })
     },
     openModal(selector) {
-      let modal = document.querySelector([`[data-modal-name=${selector}`]) || document.querySelector(selector);
+      let modal = self.container.querySelector([`[data-modal-name=${selector}`]) || document.querySelector(selector);
       modal.classList.add("modal--open");
-      document.body.style.overflow = "hidden";
+      self.container.body.style.overflow = "hidden";
     },
     onMutation(mutationsList) {
       for (let mutation of mutationsList) {
@@ -44,8 +46,9 @@ const modalsFactory = () => {
       }
     },
     closeModal(modal) {
+      console.log(modal)
       modal.classList.remove("modal--open");
-      document.body.style.overflow = "auto";
+      self.container.body.style.overflow = "auto";
     },
     getParentModal(children) {
       if (!children) return;
@@ -58,9 +61,15 @@ const modalsFactory = () => {
 };
 let modals = modalsFactory();
 modals.init({
-  closeSelector: ".closure_link"
+  closeSelector: ".closure_link",
+  // container: editor.Canvas.getBody()
 });
-
+editor.on("load", () => {
+  modals.init({
+    closeSelector: ".closure_link",
+    container: editor.Canvas.getBody()
+  });
+})
 // Данный объект нужен, чтобы каждый модуль не следил в отдельности за Dom
 // Он помогает уменьшить нагрузку
 const observer = {
