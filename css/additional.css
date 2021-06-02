@@ -132,3 +132,11 @@
   -ms-transition: opacity .5s;
   -o-transition: opacity .5s;
 }
+
+.rise, .lightbox-sait.footer {
+  cursor: pointer;
+}
+
+.online--offline {
+  display: none;
+}
