@@ -118,6 +118,7 @@ let quiz = {
       .addEventListener("click", e => {
         this.goToNextStep();
       })
+    this.selectingInit();
   },
   goToNextStep() {
     if (this.currentStep == this.numberSteps) this.finish();
@@ -156,17 +157,20 @@ let quiz = {
   },
   getLevel() {
     let res = [];
-    this.block.querySelectorAll("input[type='checkbox']").forEach((inp, i) => {
+    this.block.querySelectorAll("input").forEach((inp, i) => {
       if (inp.checked) {
-        console.log(i)
+        console.log(inp.parentNode.querySelector(".w-form-label").innerHTML)
         let levels = Object.values(this.levels);
         res.push(
-          levels.findIndex(item => item == String(i + 1))
+          levels.findIndex(item => {
+            return String(item).split(",").find(itemI => String(itemI) == String(i + 1))
+          })
         )
       }
     });
     let firstIndex = res.filter(r => r != -1)[0];
     let level = this.resultsTexts[Object.keys(this.levels)[firstIndex]]
+    console.log(res)
     return level || this.resultsTexts.default;
   },
   getPercentCompleted() {
@@ -189,6 +193,17 @@ let quiz = {
   },
   setNumberSteps() {
     this.numberSteps = this.block.querySelector(".quiz-steps").children.length;
+  },
+  selectingInit() {
+    let setView = (parent, val) => parent.querySelector(".dynamic").style = `opacity: ${val ? "1" : "0"};`
+    document.querySelectorAll(".quiz .w-checkbox").forEach(el => {
+      el.addEventListener("click", e => {
+        let parent = el.parentElement.parentElement;
+        parent.querySelectorAll("input").forEach((e, i) => {
+          setView(e.parentElement, e.checked);
+        })
+      })
+    })
   }
 }
 quiz.init("#email-form-3", {
