@@ -56,11 +56,11 @@
   }
   setTimeToCallInput();
 
-  let exitModalDontOpened = true;
-  document.addEventListener("mouseout", e => {
-    if (exitModalDontOpened && !e.relatedTarget) {
-      exitModalDontOpened = true;
-      modals.openModal("exit")
-    }
-  })
+  // let exitModalDontOpened = true;
+  // document.addEventListener("mouseout", e => {
+  //   if (exitModalDontOpened && !e.relatedTarget) {
+  //     exitModalDontOpened = true;
+  //     modals.openModal("exit")
+  //   }
+  // })
 })();
