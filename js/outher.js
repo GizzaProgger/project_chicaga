@@ -8,9 +8,7 @@
     e.target.setAttribute("src", oldImgUrl);
   })
   let date = new Date();
-  // Установить текущею дату
-  document.querySelector(".text-field-data").value = date.toISOString().substring(0, 10); 
-  function setTimeToCallInput(dateStr) {
+  function getWorkTime(dateStr) {
     let date = dateStr ? new Date(dateStr) : new Date();
     let day = date.getDay();
     // Если воскресенье или суббота или пятница
@@ -20,6 +18,12 @@
     } else {
       workTime = "12:00, 21:30";
     }
+    return workTime;
+  }
+  // Установить текущею дату
+  document.querySelector(".text-field-data").value = date.toISOString().substring(0, 10); 
+  function setTimeToCallInput(dateStr) {
+    let workTime = getWorkTime(dateStr);
     let times = generateArrOptionFromWorkTime(workTime.split(",")[0], workTime.split(",")[1]);
     times.forEach(time => {
       document.querySelector("#time").insertAdjacentHTML("beforeend", `<option ${time.selected} value="${time.value}">${time.value}</option>`);
@@ -55,7 +59,29 @@
     return res;
   }
   setTimeToCallInput();
+  
+  function getDateInSPB() {
+    let date = new Date();
+    return new Date(+date + (date.getTimezoneOffset() + 3 * 60) * 60 * 1000);
+  }
 
+  function officeIsWork() {
+    let workTime = getWorkTime().split(",");
+    let dateInSPB = getDateInSPB();
+    let startDate = new Date(2021, 1, 1, workTime[0].split(":")[0], workTime[0].split(":")[1]);
+    let endDate = new Date(2021, 1, 1, workTime[1].split(":")[0], workTime[1].split(":")[1]);
+    let currentDate = new Date(2021, 1, 1, dateInSPB.getHours(), dateInSPB.getMinutes());
+
+    if (+startDate <= +currentDate && +currentDate <= +endDate) return true;
+    return false;
+  }
+
+  let officeDontWork = !officeIsWork();
+  if (officeDontWork) {
+    document.querySelector(".online--work").classList.add("online--hidden")
+    document.querySelector(".online--dont-work").classList.remove("online--hidden")
+  }
+  
   // let exitModalDontOpened = true;
   // document.addEventListener("mouseout", e => {
   //   if (exitModalDontOpened && !e.relatedTarget) {

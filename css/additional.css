@@ -137,7 +137,7 @@
   cursor: pointer;
 }
 
-.online--offline {
+.online--hidden {
   display: none;
 }
 
