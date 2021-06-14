@@ -94,7 +94,7 @@
   top: 0;
   z-index: -100;
   pointer-events: none;
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity .8s;
   -webkit-transition: opacity .8s;
   -moz-transition: opacity .8s;

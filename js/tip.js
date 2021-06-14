@@ -4,15 +4,15 @@ const tip = {
   init() {
     this.appendTipToPage();
     document.querySelectorAll("[data-tip]").forEach(el => {
-      el.addEventListener("mouseover", e => this.showTip(e, el.dataset.tip));
+      el.addEventListener("mouseover", e => this.showTip(el, el.dataset.tip));
       el.addEventListener("mouseout", this.hiddenTip)
     }) 
   },
-  showTip(e, text) {
+  showTip(el, text) {
     let tip = document.querySelector(".div-hint");
     tip.querySelector(".text-hint").innerHTML = text;
-    let box = e.target.getBoundingClientRect();
-    tip.style.left = box.left - tip.getBoundingClientRect().width / 2 + 10 + "px";
+    let box = el.getBoundingClientRect();
+    tip.style.left = box.x + box.width / 2 - tip.getBoundingClientRect().width / 2 + "px";
     tip.style.top = box.bottom + "px";
     tip.classList.add("div-hint--active");
   },
