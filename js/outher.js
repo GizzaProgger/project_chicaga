@@ -82,11 +82,20 @@
     document.querySelector(".online--dont-work").classList.remove("online--hidden")
   }
   
-  // let exitModalDontOpened = true;
-  // document.addEventListener("mouseout", e => {
-  //   if (exitModalDontOpened && !e.relatedTarget) {
-  //     exitModalDontOpened = true;
-  //     modals.openModal("exit")
-  //   }
+  // document.querySelectorAll("[data-date-format]").forEach(el => {
+  //   el.addEventListener("change", () => {
+  //     el.setAttribute("data-date",
+  //     moment(el.value, "YYYY-MM-DD")
+  //     .format( el.getAttribute("data-date-format") )
+  //     )
+  //   })
   // })
+
+  let exitModalDontOpened = true;
+  document.addEventListener("mouseout", e => {
+    if (exitModalDontOpened && !e.relatedTarget) {
+      exitModalDontOpened = false;
+      modals.openModal("exit")
+    }
+  })
 })();

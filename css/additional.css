@@ -1,6 +1,6 @@
 .sidebar {
   position: fixed;
-  left: 71px;
+  left: auto;
   top: 32px;
 }
 .modal-wrappper {
@@ -11,14 +11,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15)));
-  background-image: linear-gradient(
-    180deg
-    , rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+  background-color: #d9d9d999;
 }
 .lbock_bg {
   height: 100vh;
+  background: transparent !important;
 }
 .modal {
   opacity: 0;
@@ -148,3 +145,10 @@
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
 }
+
+.card__online-course .list * {
+  text-decoration: none;
+}
+/* .heading3_left-copy {
+  margin-top: 35px;
+} */
