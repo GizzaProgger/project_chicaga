@@ -119,9 +119,6 @@
   background-image: none;
 }
 
-.logo-header path, .logo-header g{
-  fill: #000;
-}
 .link-video-lbock {
   transition: opacity .5s;
   -webkit-transition: opacity .5s;
@@ -146,9 +143,6 @@
   -o-border-radius: 100%;
 }
 
-.card__online-course .list * {
-  text-decoration: none;
-}
 /* .heading3_left-copy {
   margin-top: 35px;
 } */
